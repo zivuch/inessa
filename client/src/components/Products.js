@@ -125,7 +125,7 @@ const Products = (props) =>{
             <IconButton style={{marginTop: '5vh'}} aria-label="search" variant="contained" size="large" onClick={searchGFProduct}>
                 <SearchIcon />
             </IconButton>
-            
+
         </div>
         <div>
         {/* <FormControl sx={{ m: 1, width: 300 }}>
@@ -138,51 +138,51 @@ const Products = (props) =>{
                     value={category}
                     onChange={(e)=>setCategory(e.target.value)}
                     input={<OutlinedInput label="Category" />}
-                    
-        
+
+
                 >
                 {
-                        
+
                         categoryList ? categoryList.map(item=>{
                                 return(
                                     <MenuItem value={item.id}>{item.name}</MenuItem>)
-                                
+
                             }) : {msg}
                     }
 
-                
+
                 </Select>
         </FormControl>
         <IconButton aria-label="search" variant="contained" size="large" onClick={searchGFCategory}>
             <SearchIcon />
         </IconButton> */}
         </div>
-      
+
     <div>
 
 
 
             <select style={mystyle} name='categoryId' value={category} onChange={(e)=>setCategory(e.target.value)}>
             {
-                
+
                 categoryList ? categoryList.map(item=>{
                         return(
                             <option value={item.id}>{item.name}</option>)
-                        
+
                     }) : ''
             }
-                
+
             </select>
             <IconButton aria-label="search" variant="contained" size="large" onClick={searchGFCategory}>
                 <SearchIcon />
             </IconButton>
-            
+
 
 
         </div>
 
 
-        
+
 
 
         <div>
@@ -192,8 +192,8 @@ const Products = (props) =>{
                     return(
                         <div key ={item.id}>
                             <p>{item.name}</p>
-                            <img src= {`/images/${item.url}`} alt="gf product" style={{width:'200px'}}/>
-                            
+                            <img src= {`${item.url}`} alt="gf product" style={{width:'200px'}}/>
+
 
                         </div>
                 )
@@ -208,7 +208,7 @@ const Products = (props) =>{
                 return(
                     <div key ={item.id}>
                         <p>{item.name}</p>
-                        <img src= {`/images/${item.url}`} alt="gf product" style={{width:'200px'}}/>
+                        <img src= {`${item.url}`} alt="gf product" style={{width:'200px'}}/>
                     </div>
                 )
             }) : ''
@@ -222,8 +222,8 @@ const Products = (props) =>{
                 return(
                     <div key ={item.id}>
                         <p>{item.name}</p>
-                        <img src= {`/images/${item.url}`} alt="product photo" style={{height:'240px'}}/>
-                        
+                        <img src= {`${item.url}`} alt="product photo" style={{height:'240px'}}/>
+
 
                     </div>
                 )
@@ -231,7 +231,7 @@ const Products = (props) =>{
 
             }
             </div>
-            
+
 
         </div>
 
